@@ -5,7 +5,16 @@ new Vue({
     dataToBeChanged: "Initial Value",
     link: "https://www.google.com",
     finishedLink: `<a href="https://www.google.com" target="_blanck">Google</a>`,
-    counter: 0
+    counter: 0,
+    x: 0,
+    y: 0,
+    what: "Call me",
+    result: ""
+  },
+  computed: {
+    output() {
+      return this.counter > 5 ? "Greate than 5" : "Smaller than 5";
+    }
   },
   methods: {
     changeTitle(e) {
@@ -20,9 +29,22 @@ new Vue({
     },
     handleClickIncrease() {
       this.counter++;
+      this.result = this.counter > 5 ? "Greate than 5" : "Smaller than 5";
     },
     handleClickDecrease() {
       this.counter--;
-    }
+    },
+    updateCoordinates(e) {
+      this.x = e.clientX;
+      this.y = e.clientY;
+    },
+    dummy(e) {
+      e.stopPropagation();
+    },
+    alertMe(e) {
+      alert("Lol");
+    },
+    decrease() {},
+    increase() {}
   }
 });

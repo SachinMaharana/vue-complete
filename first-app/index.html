@@ -24,6 +24,18 @@
         <p> Counter is : {{counter}}</p>
         <button v-on:click="handleClickIncrease">Increase Counter</button>
         <button v-on:click="handleClickDecrease">Decrease Counter</button>
+        <p>{{result}}</p>
+        <p v-on:mousemove="updateCoordinates">Coordinates: {{x}}, {{y}}
+            <span v-on:mousemove.stop>DEAD SPOT</span>
+        </p>
+        <input type="text" v-on:keyup.enter.space="alertMe">
+        <input type="text" v-model="what">
+        <p>{{what}}</p>
+        <hr>
+        <button v-on:click="increase">Increase Counter</button>
+        <button v-on:click="decrease">Decrease Counter</button>
+        <p>Result: {{output}}</p>
+        <hr>
         <script src="https://unpkg.com/vue"></script>
         <script src="./main.js"></script>
 </body>
