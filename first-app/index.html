@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>First Vue App</title>
+</head>
+
+<body>
+    <div id="app">
+        <h1 v-once>{{title}}</h1>
+        <input type="text" v-on:input="changeTitle">
+        <p>{{title}}</p>
+        <input type="text" v-on:input="runThisFunction">
+        <h1>{{dataToBeChanged}}</h1>
+        {{sayHello()}}
+        <a :href="link" target="_blanck">Google</a>
+        <p v-html="finishedLink"></p>
+        <hr>
+        <h2>Counter</h2>
+        <p> Counter is : {{counter}}</p>
+        <button v-on:click="handleClickIncrease">Increase Counter</button>
+        <button v-on:click="handleClickDecrease">Decrease Counter</button>
+        <script src="https://unpkg.com/vue"></script>
+        <script src="./main.js"></script>
+</body>
+
+</html>
