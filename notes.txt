@@ -12,4 +12,6 @@ key modifiers, enter, space ,tap ,esc see docs
 valid js in template itself
 2 way data binding- v-model
 data property is not reactive
-computed: dependent peorpetes
+computed: dependent propetes -> caches the result -> not recalculate ->  optimizes ->Synchronous
+watch -> execute on data changes ->Reactive ?? More on this??
+shortcuts -> @click , :href
